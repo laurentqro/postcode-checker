@@ -1,0 +1,10 @@
+<%= form_with(url: "/check", local: true, method: "get") do %>
+  <%= label_tag(:postcode, "Postcode") %>
+  <%= text_field_tag(:postcode) %>
+  <%= submit_tag("Check") %>
+<% end %>
+
+<%if @result %>
+  <p>Postcode is <%= @result %></p>
+  <%= params.inspect %>
+<% end %>
