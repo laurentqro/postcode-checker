@@ -1,24 +1,12 @@
-# README
+## Postcode Checker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple web application to work out if a given postcode is within their service area.
 
-Things you may want to cover:
+## Run all the tests
 
-* Ruby version
+`bin/rails test:all`
 
-* System dependencies
+## Run the application
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* `bin/rails server`
+* point your web browser to http://localhost:3000
