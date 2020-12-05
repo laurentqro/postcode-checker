@@ -2,23 +2,25 @@ require 'test_helper'
 
 class ApiClientAllowedPostcodeStub
   def lookup_postcode(postcode)
-    {
+    response = {
       "status": 200,
       "result": {
         "lsoa": "Fooshire 034A"
       }
     }
+    ApiResponse.new(response)
   end
 end
 
 class ApiClientProhibitedPostcodeStub
   def lookup_postcode(postcode)
-    {
+    response = {
       "status": 200,
       "result": {
         "lsoa": "Barshire 035B"
       }
     }
+    ApiResponse.new(response)
   end
 end
 
