@@ -61,4 +61,12 @@ class CheckerTest < ActiveSupport::TestCase
 
     assert Checker.postcode_allowed?(api_client, postcode_allowed_list, lsoa_allowed_list, "baz")
   end
+
+  test "unrecognised postcode" do
+    api_client = ApiClientUnrecognisedPostcodeStub.new
+    lsoa_allowed_list = ["foo"]
+    postcode_allowed_list = ["baz"]
+
+    assert_not Checker.postcode_allowed?(api_client, postcode_allowed_list, lsoa_allowed_list, "aldksfjasld")
+  end
 end
