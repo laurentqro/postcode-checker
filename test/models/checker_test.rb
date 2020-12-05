@@ -7,7 +7,8 @@ class ApiClientAllowedPostcodeStub
       "result": {
         "lsoa": "Fooshire 034A"
       }
-    }
+    }.to_json
+
     ApiResponse.new(response)
   end
 end
@@ -19,7 +20,8 @@ class ApiClientProhibitedPostcodeStub
       "result": {
         "lsoa": "Barshire 035B"
       }
-    }
+    }.to_json
+
     ApiResponse.new(response)
   end
 end
